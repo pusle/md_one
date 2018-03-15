@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400');
+
+
+html,
+body {
+    font-family: Roboto, sans-serif;
+}
+
+
+
+/**
+ * System branding
+ */
+
+.block-system-branding-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #EBEBEB;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    position: relative;
+    z-index: 10;
+}
+
+.block-system-branding-block .site-logo {
+    margin-right: 10px;
+}
+
+.block-system-branding-block .site-logo img {
+    width: 50px;
+}
+
+
+
+
+/**
+ * Menus
+ */
+
+.menu--main {
+    background-color: #F2F2F2;
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    position: relative;
+    z-index: 5;
+}
+
+
+/**
+ * Breadcrumb
+ */
+
+.breadcrumb {
+    background-color: #FCFCFC;
+    box-shadow: 0 0 10px rgba(0,0,0,.05);
+}
+
+.breadcrumb ol li:after {
+    display: inline-block;
+    content: '\00BB';
+}
+
+.breadcrumb ol li:last-of-type:after {
+    display: none;
+    content: '';
+}
