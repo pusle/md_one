@@ -1,8 +1,0 @@
-<?php
-
-
-
-
-function minddesign_preprocess_links(&$variables) {
-
-}

@@ -1,9 +1,9 @@
-name: MindDesign
+name: MD ONE
 type: theme
-description: 'Spesialtilpasset for minddesign.no.'
+description: 'Simple theme in black/gray tones/white with tachyons css'
 core: 8.x
 libraries:
-  - minddesign/global-styling
+  - md_one/global-styling
 regions:
   header: Header
   content: Content
