@@ -7,4 +7,9 @@ libraries:
 regions:
   header: Header
   content: Content
+  frontpage_region_1: 'Front page region 1'
+  frontpage_region_2: 'Front page region 2'
+  frontpage_region_3: 'Front page region 3'
+  frontpage_region_4: 'Front page region 4'
+  frontpage_region_5: 'Front page region 5'
   footer: Footer

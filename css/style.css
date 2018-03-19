@@ -1,12 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700,900');
 
+
+/**
+ * Typography
+ */
 
 html,
 body {
-    font-family: Roboto, sans-serif;
+    font-family: Lato, sans-serif;
+}
+
+h2 {
+    margin: 0 0 2em;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #333;
+    text-decoration: none;
 }
 
 
+
+
+/**
+ * Layout
+ */
+main {
+    padding-top: 60px;
+}
+
+
+.site-header {
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .85);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    box-shadow: 0 0 30px rgba(0,0,0,.1);
+    position: fixed;
+    z-index: 1000;
+}
 
 /**
  * System branding
@@ -16,11 +52,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    background-color: #EBEBEB;
-    box-shadow: 0 0 30px rgba(0,0,0,.1);
-    position: relative;
-    z-index: 10;
 }
 
 .block-system-branding-block .site-logo {
@@ -28,7 +59,7 @@ body {
 }
 
 .block-system-branding-block .site-logo img {
-    width: 50px;
+    width: 40px;
 }
 
 
@@ -39,10 +70,17 @@ body {
  */
 
 .menu--main {
-    background-color: #F2F2F2;
-    box-shadow: 0 0 30px rgba(0,0,0,.1);
-    position: relative;
-    z-index: 5;
+
+}
+
+.menu--main ul li a {
+    color: #ccc;
+}
+
+.menu--main ul li .is-active,
+.menu--main ul li .menu-item--active-trail {
+    color: #fff;
+    text-shadow: 0 0 3px #f5f5f5;
 }
 
 
@@ -64,3 +102,326 @@ body {
     display: none;
     content: '';
 }
+
+
+
+
+/**
+ * Classes
+ */
+
+/* Hero */
+.hero {
+    padding: 2em 20px;
+
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    flex-grow: 1;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.image-style-full-width-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/**
+ * Front page
+ *********************/
+
+/* Frontpage sections */
+.path-frontpage section {
+    padding: 5em 20px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,eeeeee+100 */
+    background: rgb(245,245,245); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(245,245,245,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(245,245,245,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(245,245,245,1) 0%,rgba(238,238,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Hero specific for front page */
+.hero {
+    height: calc(100vh - 60px);
+
+    flex-direction: column;
+
+    text-align: center;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e9f4fa+0,ffffff+100 */
+    background: #e9f4fa; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9f4fa 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e9f4fa 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e9f4fa 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f4fa', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.hero h1 {
+    font-size: 3.0em;
+    font-weight: normal;
+}
+
+
+
+/* Projects */
+.projects {
+    background-color: #f5f5f5;
+}
+
+.project-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.project-item {
+    margin-bottom: 1em;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 25px #ccc;
+    transition: box-shadow .2s ease-in-out;
+}
+
+.project-item:hover {
+
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+@media screen and (min-width: 600px) {
+    .project-item {
+        flex: 0 0 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .project-item {
+        flex: 0 0 calc(33% - 1em);
+    }
+}
+
+.project-item-image {
+    max-width: 100%;
+    /* filter: grayscale(100%);
+    transition: filter .2s ease-in-out; */
+}
+
+.project-item:hover .project-item-image {
+    /* filter: grayscale(0); */
+}
+
+.project-item-description {
+    padding: 2em;
+}
+
+.project-item-description h3 {
+    margin: 0 0 .5em 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+.project-item-description p {
+    margin: 0;
+    padding-bottom: 1em;
+    line-height: 1.4em;
+    font-weight: 100;
+}
+
+.project-item-link {
+    padding: 10px 0;
+    margin-top: auto;
+    display: block;
+    text-align: right;
+    text-decoration: none;
+}
+
+
+
+
+/* Services */
+
+.services {
+    background-color: #eee;
+}
+
+.service-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.service-list:hover .service-item {
+    /* opacity: .5; */
+}
+
+.service-item {
+    margin-bottom: 1em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex: 1 0 100%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 25px #ccc;
+    transition: opacity .2s ease-in-out;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+0,f4f4f4+50,f7f7f7+100 */
+    background: #f9f9f9; /* Old browsers */
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #f4f4f4 50%, #f7f7f7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f9f9f9 0%,#f4f4f4 50%,#f7f7f7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f9f9f9 0%,#f4f4f4 50%,#f7f7f7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
+}
+
+.service-item:hover {
+    /* opacity: 1 !important; */
+}
+
+.service-item img {
+    margin: 0 auto 1em auto;
+    max-width: 100px;
+    /* filter: grayscale(100%);
+    transition: filter .2s ease-in-out; */
+}
+
+
+@media screen and (min-width: 600px) {
+    .service-item {
+        flex: 0 0 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .service-item {
+        flex: 1;
+        margin: 10px;
+    }
+    .service-item:first-of-type {
+        margin-left: 0;
+    }
+    .service-item:last-of-type {
+        margin-right: 0;
+    }
+}
+
+
+.service-item-description {
+    padding: 2em;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-content: center;
+}
+
+.service-item-description:hover img {
+    /* filter: grayscale(0); */
+}
+
+.service-item-description h3 {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.1em;
+}
+
+.service-item-description ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.service-item-description ul li {
+    padding-bottom: .4em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Technologies */
+.technologies {
+    background-color: #555;
+}
+
+.technology-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.technology-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex: 1 0 100%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+    .technology-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+    .technology-item {
+        flex: 0 0 calc(33% - 10px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .technology-item {
+        flex: 0 0 calc(25% - 10px);
+    }
+}
+
+.technology-item a {
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    flex: 1 0 0;
+    transition: box-shadow .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.technology-item a:hover {
+    background-color: #eee;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .1);
+}
+
+.technology-item a img {
+    padding: 1em;
+    width: 100%;
+    max-height: 60px;
+    display: flex;
+    flex: 1 0 0;
+}
+
+
+
