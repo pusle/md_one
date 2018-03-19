@@ -1,4 +1,4 @@
 # md_one
 Drupal 8 theme
 
-![Screenshot of MD ONE](md_one/screenshot.png)
+[[https://github.com/pusle/md_one/blob/master/img/screenshot.png|alt=Screenshot of MD ONE]]
