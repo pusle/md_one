@@ -198,12 +198,12 @@ main {
     flex-direction: column;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 0 25px #ccc;
+    box-shadow: 0 0 2px #ccc;
     transition: box-shadow .2s ease-in-out;
 }
 
 .project-item:hover {
-
+    box-shadow: 0 0 25px #ccc;
 }
 
 .project-item a {
