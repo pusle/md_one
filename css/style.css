@@ -41,7 +41,7 @@ main {
     border-bottom: 1px solid rgba(255,255,255,.2);
     box-shadow: 0 0 30px rgba(0,0,0,.1);
     position: fixed;
-    z-index: 1000;
+    z-index: 500;
 }
 
 /**
